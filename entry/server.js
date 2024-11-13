@@ -21,7 +21,7 @@ connect_to_db(process.env.URI)
 
 server.use(cookiePARSER())
 server.use(express.json())
-server.use(   cors(  {credentials: true, origin: 'https://location-tracking-frontend.vercel.app/'}   )      )
+server.use(   cors(  {credentials: true, origin: 'https://location-tracking-frontend.vercel.app'}   )      )
 
 
 
@@ -34,7 +34,7 @@ server.use(locationROUTER)
 
 const newserver = http.createServer(  server   )
 
-const BackendSwitch = new Server(  newserver  , {  cors : { origin : "https://location-tracking-frontend.vercel.app/" } } )
+const BackendSwitch = new Server(  newserver  , {  cors : { origin : "https://location-tracking-frontend.vercel.app" } } )
 
 
 
