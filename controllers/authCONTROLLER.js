@@ -116,7 +116,11 @@ async function logout(req, res){
 
    try {
 
-    res.cookie( "logintoken" , undefined  , null  )
+    const cookieoption = {  httpOnly : true , maxAge : 0 , secure : true , sameSite : "None"}
+    
+    
+    // setting token and cookie details to cookie in frontend
+    res.cookie( "logintoken" , null   , cookieoption  )
 
     res.json({      error: false ,mssg:"logged out successfullly"})
     
