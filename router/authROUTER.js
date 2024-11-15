@@ -43,7 +43,7 @@ authROUTER.post('/update/username' ,  check_login , update_username  )
 
 
 
-authROUTER.post('/makeserveralive' ,  makeserveralive  )
+authROUTER.get('/makeserveralive' ,  makeserveralive  )
 
 
 export default authROUTER   
