@@ -492,9 +492,11 @@ async function update_username(req , res){
 
 
 
+function makeserveralive(req , res){
+    res.json({   error : false , message : "server_is_alive"  })
+}  
 
 
 
 
-
-export {signup ,  logout  , request_otp  , enter_otp  , creds_compare , set_jwt , getallusers , whoiam , receiverinfo , isloggedin , update_profile_pic , update_username  }
+export {signup ,  logout  , request_otp  , enter_otp  , creds_compare , set_jwt , getallusers , whoiam , makeserveralive , receiverinfo , isloggedin , update_profile_pic , update_username  }
